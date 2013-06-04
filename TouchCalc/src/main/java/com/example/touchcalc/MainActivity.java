@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 public class MainActivity extends Activity {
@@ -28,7 +29,24 @@ public class MainActivity extends Activity {
         // Set adapter of the keypad grid
         mKeypadGrid.setAdapter(mKeypadAdapter);
 
-    mKeypadGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mKeypadAdapter.setOnButtonClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button) v;
+                // Get the KeypadButton value which is used to identify the
+                // keypad button from the Button's tag
+                KeypadButton keypadButton = (KeypadButton) btn.getTag();
+
+                // Process keypad button
+                ProcessKeypadInput(keypadButton);
+            }
+
+            private void ProcessKeypadInput(KeypadButton keypadButton) {
+
+            }
+        });
+
+        mKeypadGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView <?> parent, View v,int position, long id) {
             // This will not help us catch button clicks!
         }

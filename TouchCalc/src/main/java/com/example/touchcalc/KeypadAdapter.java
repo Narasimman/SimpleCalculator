@@ -11,6 +11,9 @@ import android.view.View.OnClickListener;
 public class KeypadAdapter extends BaseAdapter {
     private Context mContext;
 
+    // Declare button click listener variable
+    private OnClickListener mOnButtonClick;
+
     public KeypadAdapter(Context c) {
         mContext = c;
     }
@@ -27,12 +30,21 @@ public class KeypadAdapter extends BaseAdapter {
         return 0;
     }
 
+    // Method to set button click listener variable
+    public void setOnButtonClickListener(OnClickListener listener) {
+        mOnButtonClick = listener;
+    }
+
+
     // create a new ButtonView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         Button btn;
         if (convertView == null) { // if it's not recycled, initialize some attributes
             btn = new Button(mContext);
             KeypadButton keypadButton = mButtons[position];
+            if (keypadButton != KeypadButton.DUMMY)
+                btn.setOnClickListener(mOnButtonClick);
+
 
             // Set CalculatorButton enumeration as tag of the button so that we
             // will use this information from our main view to identify what to do

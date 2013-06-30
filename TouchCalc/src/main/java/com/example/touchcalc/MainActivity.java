@@ -6,7 +6,9 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -40,10 +42,6 @@ public class MainActivity extends Activity {
                 // Process keypad button
                 ProcessKeypadInput(keypadButton);
             }
-
-            private void ProcessKeypadInput(KeypadButton keypadButton) {
-
-            }
         });
 
         mKeypadGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -61,5 +59,26 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
+
+    private void ProcessKeypadInput(KeypadButton keypadButton) {
+        String text = keypadButton.getText().toString();
+        TextView userInputText = (TextView) findViewById(R.id.txtInput);
+        String currentInput = userInputText.getText().toString();
+
+        int len = currentInput.length();
+
+        switch (keypadButton) {
+            case CE:
+                userInputText.setText("0");
+                break;
+            default:
+                if(Character.isDigit(text.charAt(0))){
+                    if(currentInput.equals("0"))
+                        userInputText.setText(text);
+                    else
+                        userInputText.append(text);
+                }
+                break;
+        }
+    }
 }

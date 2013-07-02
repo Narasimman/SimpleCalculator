@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TouchCalc.iml" filepath="$PROJECT_DIR$/TouchCalc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TouchCalc-TouchCalc.iml" filepath="$PROJECT_DIR$/TouchCalc-TouchCalc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TouchCalc/touchcalc.iml" filepath="$PROJECT_DIR$/TouchCalc/touchcalc.iml" />
     </modules>
   </component>
 </project>

@@ -45,6 +45,35 @@ public class KeypadAdapter extends BaseAdapter {
             if (keypadButton != KeypadButton.DUMMY)
                 btn.setOnClickListener(mOnButtonClick);
 
+            switch(keypadButton.mCategory)
+            {
+                case MEMORYBUFFER:
+                    btn.setBackgroundResource(R.drawable.keypadmembuffer);
+                    break;
+                case CLEAR:
+                    btn.setBackgroundResource(R.drawable.keypadclear);
+                    break;
+                case NUMBER:
+                    btn.setBackgroundResource(R.drawable.keypad);
+                    break;
+                case OPERATOR:
+
+                    btn.setBackgroundResource(R.drawable.keypadop);
+                    break;
+                case OTHER:
+                    btn.setBackgroundResource(R.drawable.keypadother);
+                    break;
+                case RESULT:
+                    btn.setBackgroundResource(R.drawable.keypadresult);
+                    break;
+                case DUMMY:
+                    btn.setBackgroundResource(R.drawable.appvertical);
+                    break;
+                default:
+                    btn.setBackgroundResource(R.drawable.keypad);
+                    break;
+            }
+
 
             // Set CalculatorButton enumeration as tag of the button so that we
             // will use this information from our main view to identify what to do

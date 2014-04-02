@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="@drawable/appvertical"
-        >
+              android:layout_height="fill_parent">
 
     <TextView
             android:id="@+id/txtStack"
@@ -12,11 +10,9 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:gravity="right"
-            android:background="#b4f7ff"
             android:layout_marginTop = "3sp"
             android:layout_marginLeft = "5sp"
-            android:layout_marginRight = "5sp"
-            android:textColor="#0f0f0c"/>
+            android:layout_marginRight = "5sp"/>
 
 
     <TextView
@@ -25,10 +21,9 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:gravity="right"
-            android:background="#b4f7ff"
-            android:textColor="#0f0f0c"
             android:layout_marginLeft = "5sp"
-            android:layout_marginRight = "5sp"/>
+            android:layout_marginRight = "5sp"
+            android:text="0"/>
 
 
     <TextView
@@ -36,11 +31,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:textColor="#0f0f0c"
             android:gravity="left"
             android:layout_marginLeft = "5sp"
-            android:layout_marginRight = "5sp"
-            android:background="#b4f7ff"/>
+            android:layout_marginRight = "5sp"/>
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/grdButtons"
@@ -51,9 +44,5 @@
               android:verticalSpacing="10dp"
               android:horizontalSpacing="10dp"
               android:stretchMode="columnWidth"
-              android:gravity="center"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
-
-
-
+              android:gravity="center"/>
 </LinearLayout>

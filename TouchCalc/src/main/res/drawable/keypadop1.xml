@@ -41,7 +41,7 @@
 
     <item>        
         <shape>
-            <gradienta
+            <gradient
                 android:startColor="#ff8c00"
                 android:endColor="#ff8c00"
                 android:angle="270" />

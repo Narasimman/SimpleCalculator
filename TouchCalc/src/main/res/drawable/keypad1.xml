@@ -22,10 +22,11 @@
 
     <item android:state_focused="true" >
         <shape>
-            <gradient
-                android:startColor="#ffc2b7"
-                android:endColor="#ffc2b7"
+             <gradient
+                android:startColor="#ff8c00"
+                android:endColor="#ff8c00"
                 android:angle="270" />
+                
             <stroke
                 android:width="2dp"
                 android:color="#dcdcdc" />
@@ -41,13 +42,13 @@
 
     <item>        
         <shape>
-            <gradienta
-                android:startColor="#ff8c00"
-                android:endColor="#ff8c00"
+            <gradient
+                android:startColor="#ffd700"
+                android:endColor="#FFFFFF"
                 android:angle="270" />
             <stroke
                 android:width="2dp"
-                android:color="#ffc782" />
+                android:color="#dcdcdc" />
             <corners
                 android:radius="2dp" />
             <padding
